@@ -23,26 +23,27 @@ python ./fairseq_mix/setup.py build develop
 
 
 # Preprocess the data:
-1. Prepare BPE data, it should be same as the [fairseq](https://github.com/pytorch/fairseq/blob/master/examples/translation/prepare-iwslt14.sh)
-2. Prepare SentencePiece (SP) data, learning SP vocabulayr and tokenized data by running:
+* Prepare BPE data, refer to [data_prepare](https://github.com/apeterswu/fairseq_mix/tree/master/examples/translation)
+
+* Prepare SentencePiece (SP) data, learning SP vocabulayr and tokenized data by running:
 
 ``` python sen_piece_learn.py ```
 
-3. Preprocess the BPE and SP data by running:
+* Preprocess the BPE and SP data by running:
 
 ``` python preprocess.py ```
 
 
 # Training models:
-1. Pre-train mix_presentation model
+* Pre-train mix_presentation model
 
 ``` python ruuning_scripts/train_mix_iwslt14_emb256.sh ```
 
-2. Generate the translation data for self-training (co-teaching data generation)
+* Generate the translation data for self-training (co-teaching data generation)
 
 ``` python infer_and_process_train_data.sh ```
 
-3. Self-training models (co-teaching model training)
+* Self-training models (co-teaching model training)
 ``` python ruuning_scripts/train_mix_iwslt14_emb256_reset_trans.sh ```
 
 
