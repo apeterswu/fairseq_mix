@@ -42,18 +42,18 @@ python preprocess.py
 * Pre-train mix_presentation model
 
 ``` 
-python ruuning_scripts/train_mix_iwslt14_emb256.sh 
+bash ruuning_scripts/train_mix_iwslt14_emb256.sh 
 ```
 
 * Generate the translation data for self-training (co-teaching data generation)
 
 ``` 
-python infer_and_process_train_data.sh 
+bash infer_and_process_train_data.sh 
 ```
 
 * Self-training models (co-teaching model training)
 ``` 
-python ruuning_scripts/train_mix_iwslt14_emb256_reset_trans.sh 
+bash ruuning_scripts/train_mix_iwslt14_emb256_reset_trans.sh 
 ```
 
 
@@ -61,13 +61,13 @@ python ruuning_scripts/train_mix_iwslt14_emb256_reset_trans.sh
 1. Infer pre-train model (mix_representation model)
 
 ``` 
-python ruuning_scripts/infer_iwslt_emb256.sh 
+bash ruuning_scripts/infer_iwslt_emb256.sh 
 ```
 
 2. Infer self-training model (co-teaching model)
 
 ```
-python running_scripts/infer_iwslt_emb256_reset_trans.sh 
+bash running_scripts/infer_iwslt_emb256_reset_trans.sh 
 ```
 
 
