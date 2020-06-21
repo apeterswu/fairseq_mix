@@ -1,0 +1,6 @@
+cffi
+numpy
+torch
+tqdm
+subword-nmt
+sentencepiece
