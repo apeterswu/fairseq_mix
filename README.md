@@ -11,6 +11,8 @@ The project is based on the [fairseq (version 0.6.1)](https://github.com/pytorch
 }
 ```
 
+Exampel for Neural Machine Translation (NMT) experiments. 
+
 # Requirements and Installation
 * A [PyTorch installation (0.4.0)](http://pytorch.org/)
 and install fairseq with:
